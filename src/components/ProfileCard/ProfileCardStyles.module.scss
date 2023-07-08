@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.wrapper {
+  padding-top: 100px;
+}
+.profileImg {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0px 5px 50px 0px rgb(108, 68, 252),
+    0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+
+  @media screen and (max-width: 576px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.profileCard {
+  width: 100%;
+  min-height: 460px;
+  margin: auto;
+  box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  background: #fff;
+  border-radius: 12px;
+  max-width: 700px;
+  position: relative;
+
+  &.active {
+    .profileCardCnt {
+      filter: blur(6px);
+    }
+
+    .profileCardMessage,
+    .profileCardOverlay {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: 0.1s;
+    }
+
+    .profileСardForm {
+      transform: none;
+      transition-delay: 0.1s;
+    }
+  }
+  .profileCardCnt {
+    margin-top: -35px;
+    text-align: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    transition: all 0.3s;
+  }
+
+  .profileCardName {
+    font-weight: 700;
+    font-size: 24px;
+    color: #6944ff;
+    margin-bottom: 15px;
+  }
+
+  .profileCardText {
+    font-size: 18px;
+    font-weight: 700;
+    color: #324e63;
+    margin-bottom: 15px;
+  }
+  .profileCardLocTxt {
+    font-size: 18px;
+    font-weight: 700;
+    color: #324e63;
+    margin-bottom: 15px;
+  }
+  .profileCardLoc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .profileCardInf {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 35px;
+
+    .profileCardInfItem {
+      padding: 10px 35px;
+      min-width: 150px;
+
+      @media screen and (max-width: 768px) {
+        padding: 10px 20px;
+        min-width: 120px;
+      }
+    }
+
+    .profileCardInfTitle {
+      font-weight: 700;
+      font-size: 27px;
+      //color: #6944ff;
+      color: #324e63;
+    }
+
+    .ProfileCardInfTxt {
+      font-weight: 500;
+      margin-top: 7px;
+    }
+  }
+}
